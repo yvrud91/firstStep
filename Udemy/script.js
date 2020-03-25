@@ -1,83 +1,23 @@
-'use strict'; //ставить всегда
+'use strict'; 
 
-// console.log('Hello, world!');
+let money = prompt('Ваш бюджет на месяц?', '');
+let time = prompt('Введите дату в формате YYYY-MM-DD', '');
 
-//переменные
-var leftBorderWidth = 1; //существует до выполнения скрипта 
-let second = 2; //хойстинг, всплытие переменной, появляется когда код до неё доходит
-const pi = 3.14; //аналогично let, нельзя изменить
+let appData = {
+    budget: money, //бюджет
+    timeData: time,
+    expenses: {}, //объект с обязательными расходами
+    optionalExpenses: {}, // объект с необязательными расходами
+    income: [], // массив данных с доп. доходом
+    savings: false
+};
 
-//классификация типов данных
+let a = prompt('Введите обязательную статью расходов в этом месяце', ''),
+	a1 = prompt('Во сколько обойдется?', ''),
+	b = prompt('Введите обязательную статью расходов в этом месяце', ''),
+    b1 = prompt('Во сколько обойдется?', '');
 
-/*числовые данные: числа, Infinity (/0), NaN
-строка "string" ковычки!!
-символ
-логический true/false var boolean = true;
-null что-то не существует
-indefined что-то существует, но значения не имеет
-объект var obj = {методы=функции} коллекция данных
-*/
-/*
-let person = {
-    name: "John",
-    age: 25,
-    isMarried: false
-}
-console.log(person.age); //25
-console.log(person['isMarried']);*/
-
-//массив
-
-//let photo = ['plum.png', 'carrot.jpg', 'potatoe.jpg'];
-
-//console.log(photo[0]); //всё с нуля
-
-//общение с пользователем
-
-//console.log(); видно только в панели разработчика
-
-//alert('Hello World!');
-//модальное окно, после него все скрипты останавливаются
-
-//confirm('Whazup?');
-//модальное окно с кнопками ок и cancel
-
-/*let answer = confirm('Whazup?');
-
-console.log(answer);
-ответ попадает в консоль булиновым значением*/
-
-//prompt модальное окно с формой для ответа, часть после запятой подставлена по умолчанию (может быть пустой)
-//let answer = prompt('Can U hear me now?', 'Yeah');
-
-//console.log(answer);
-
-//конкатенация 
-//console.log('Star' + ' Wars'); строка
-//console.log(4 + ' Star'); строка 4 Star
-
-//
-
-// let incr = 10,
-//     decr = 10; 
-
-// incr++; //плюс 1
-// decr--; //минус 1
-// console.log(incr);
-// console.log(decr);
-
-// let isChecked = true, 
-//     isClosed = false;
-
-// console.log(isChecked && isClosed); //оба должны соответствовать
-// console.log(isChecked || isClosed); //или или 
-
-//!isClosed знак отрицания (превращает в true)
-
-//надо что-то изменить для гита, ну
-
-
-//git status проверить были ли изменения 
-//git add -A добавить всё
-//git commit -a -m"Neassage" сохранить изменения
-//git push отправляет в космос.. в инет 
+    appData.expenses[a] = a1;
+    appData.expenses[b] = b1;
+    
+alert(appData.budget / 30);
