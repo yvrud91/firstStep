@@ -1,6 +1,6 @@
 'use strict'; 
 
-let money = prompt('Ваш бюджет на месяц?', '');
+let money = +prompt('Ваш бюджет на месяц?', '');
 let time = prompt('Введите дату в формате YYYY-MM-DD', '');
 
 let appData = {
@@ -30,8 +30,8 @@ for (let i = 0; i < 2; i++) {
 
 // let i = 0;
 // while (i < 2) {
-//     let a = prompt ("Введите обязательную статью расходов в этом месяце", ""),
-//         b = prompt ("Во сколько обойдется?", "");
+//     let a = prompt ('Введите обязательную статью расходов в этом месяце', ''),
+//         b = prompt ('Во сколько обойдется?', '');
 
 //     if ( typeof(a)==='string' && typeof(a) != null && typeof(b) != null && a != "" && b != "" && a.length < 50) {
 
@@ -39,7 +39,7 @@ for (let i = 0; i < 2; i++) {
 
 //         appData.expenses[a] = b;
 //     } else {
-//          console.log ("bad result");
+//          console.log ('error');
 //          i--;
 //     }
 
@@ -52,8 +52,8 @@ for (let i = 0; i < 2; i++) {
 
 // let i = 0;
 // do {
-//     let a = prompt ("Введите обязательную статью расходов в этом месяце", ""),
-//         b = prompt ("Во сколько обойдется?", "");
+//     let a = prompt ('Введите обязательную статью расходов в этом месяце', ''),
+//         b = prompt ('Во сколько обойдется?', '');
 
 //     if ( typeof(a)==='string' && typeof(a) != null && typeof(b) != null && a != "" && b != "" && a.length < 50) {
 
